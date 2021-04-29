@@ -3,11 +3,11 @@ import _ from "lodash";
 import { Button } from "@material-ui/core";
 
 
-  const Header = (props)=> {
- const inputRef = useRef()
-const [keyword,setKeyword] = useState("")
+const Header = (props)=> {
+  const inputRef = useRef()
+  const [keyword,setKeyword] = useState("")
   const handleOnClickInput = (e) => {
-      e.preventDefault()
+    e.preventDefault()
     // this.setState({ keyword: e.target.value });
     setKeyword(inputRef.current.value)
     // this._debounce(e.target.value);
@@ -19,14 +19,14 @@ const [keyword,setKeyword] = useState("")
     props.onSerchYoutube(value);
   }, 200);
 
-    return (
-      <form style={{ display:"center" ,marginTop: "20px", textAlign: "center" }}>
-        {/* <input  value={this.state.keyword} /> */}
-        <input  ref={inputRef}/>
+  return (
+    <form style={{ display:"center" ,marginTop: "20px", textAlign: "center" }}>
+      {/* <input  value={this.state.keyword} /> */}
+      <input  ref={inputRef}/>
 
-        <Button type="submit" onClick={handleOnClickInput} variant="contained"color="primary">SEARCH</Button>;
-      </form>
-    );
+      <Button type="submit" onClick={handleOnClickInput} variant="contained"color="primary">SEARCH</Button>;
+    </form>
+  );
   
 }
 

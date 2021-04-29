@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import Youtube from './components/Youtube';
+import History from './components/History'
 
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
@@ -31,6 +32,7 @@ export default class App extends React.Component {
         <Header onSerchYoutube={this.onSerchYoutube} />
         {/* 追加 */}
         <Youtube videos={this.state.videos}/>
+        <History videos={this.state.videos}/>
       </>
     )
   }
