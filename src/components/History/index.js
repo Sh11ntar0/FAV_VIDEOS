@@ -9,6 +9,7 @@ import { addHistory } from "../../features/counter/counterSlice";
 const History = ({ videos }) => {
   useEffect(() => {
     setHistory(videos);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videos]);
 
   const histories = useSelector((state) => state.counter.items);
