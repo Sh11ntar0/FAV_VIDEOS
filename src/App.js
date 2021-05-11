@@ -22,7 +22,7 @@ export default class App extends React.Component {
           });
       })
       .catch(() => {
-          console.log('通信に失敗しました');
+          console.log('It is not work');
       });
   }
 
