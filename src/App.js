@@ -22,7 +22,7 @@ export default class App extends React.Component {
           });
       })
       .catch(() => {
-          console.log('It is not work');
+          console.log('It dose not work');
       });
   }
 
